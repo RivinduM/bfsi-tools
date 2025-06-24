@@ -4,11 +4,12 @@
   "private": true,
   "dependencies": {
     "@asgardeo/auth-react": "^2.0.5",
-    "@emotion/react": "^11.11.0",
+    "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^4.5.8",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.3",
+    "@mui/styles": "^5.12.3",
     "@mui/x-date-pickers": "^6.6.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
