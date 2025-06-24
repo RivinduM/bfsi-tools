@@ -2,7 +2,7 @@
 org = "wso2"
 name = "backend_service"
 version = "0.1.0"
-distribution = "2201.8.1"
+distribution = "2201.10.4"
 authors = ["Ballerina"]
 keywords = ["BFSI","ISO","Tools"]
 
