@@ -50,7 +50,7 @@ export const tools: Tool[] = [
     description:
       "Introducing our API for BFSI IT developers, enabling seamless conversion of MT messages to ISO 20022 format. Simplify integration and data exchange processes, experiencing reduced development complexity and accelerated time-to-market as you effortlessly transition to ISO 20022 standards.",
     path: "/mt-mx",
-    image: "tools-logo/with-background/mt-mx.png",
+    image: "/tools-logo/with-background/mt-mx.png",
     icon: <TransformOutlinedIcon sx={{ width: 23, height: 23 }} />,
     component: <MtToMx />,
     url: " https://wso2.com/solutions/financial-services/",
