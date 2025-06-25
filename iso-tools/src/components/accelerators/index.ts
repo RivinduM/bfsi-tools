@@ -6,3 +6,4 @@ export { Hl7v2ToFhir } from "./Hl7v2ToFhir";
 export { SmartOnFhir } from "./SmartOnFhir";
 // export { FhirApis } from "./fhi_apis/FhirApis";
 export { MtToMx } from "./MtToMx";
+export { MxToMt } from "./MxToMt";

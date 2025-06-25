@@ -53,6 +53,9 @@ export const MainContent = () => {
       case "/mt-mx":
         document.title = "MT to MX";
         break;
+      case "/mx-mt":
+        document.title = "MX to MT";
+        break;
       default:
         document.title = "BFSI Tools";
     }

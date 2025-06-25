@@ -3,6 +3,8 @@ export const BACKEND_BASE_URL: string =
 
 export const MT_TO_MX_URL: string = "/mt-mx/transform";
 
+export const MX_TO_MT_URL: string = "/mx-mt/transform";
+
 export const HL7V2_TO_FHIR_URL: string = "/v2tofhir/transform";
 
 export const CCDA_TO_FHIR_URL: string = "/ccdatofhir/transform";

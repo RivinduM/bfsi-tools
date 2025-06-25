@@ -10,6 +10,7 @@ import {
   FhirPath,
   FhirValidation,
   MtToMx,
+  MxToMt,
   SmartOnFhir,
 } from "../components/accelerators";
 import { MTMXGITHUBCONTENT } from "./GithubBladeConfig";
@@ -56,6 +57,22 @@ export const tools: Tool[] = [
     url: " https://wso2.com/solutions/financial-services/",
     githubContent: MTMXGITHUBCONTENT,
     status: Config.tools.MT_TO_MX
+      ? ToolStatus.active
+      : ToolStatus.maintenance,
+  },
+  {
+    title: "MX to MT",
+    subTitle: "Transform",
+    shortDescription: "Convert MX messages to SWIFT MT format",
+    description:
+      "Introducing our API for BFSI IT developers, enabling seamless conversion of MX messages to SWIFT MT format. Simplify integration and data exchange processes, experiencing reduced development complexity and accelerated time-to-market as you effortlessly transition to SWIFT MT standards.",
+    path: "/mx-mt",
+    image: "/tools-logo/with-background/mx-mt.png",
+    icon: <TransformOutlinedIcon sx={{ width: 23, height: 23 }} />,
+    component: <MxToMt />,
+    url: " https://wso2.com/solutions/financial-services/",
+    githubContent: MTMXGITHUBCONTENT,
+    status: Config.tools.MX_TO_MT
       ? ToolStatus.active
       : ToolStatus.maintenance,
   }

@@ -205,7 +205,7 @@ const handleSubmit = async () => {
       onClear={handleInputClear}
       onExecute={handleSubmit}
       placeholder="Paste or upload a SWIFT MT message here..."
-      fileType="textile"
+      fileType="txt"
       uploadEnabled
       readFile={readFile}
       clearEnabled
@@ -253,7 +253,7 @@ function formatXml(xml: string) {
       darkMode={darkMode}
       onClear={handleOutputClear}
       placeholder={
-        isLoading ? "Loading..." : "ISO 20022(MX) Resource will be displayed here..."
+        isLoading ? "Loading..." : "ISO 20022(MX) Message will be displayed here..."
       }
       extensions={[xml()]}
       downloadEnabled
