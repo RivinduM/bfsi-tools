@@ -1,0 +1,13 @@
+schemaVersion: 1.1
+endpoints:
+    - name: iso-backend-service
+      displayName: ISO Backend Service
+      service:
+        basePath: /
+        port: 9090
+      type: REST
+      networkVisibilities:
+        - Project
+        - Public
+      schemaFilePath: oas/backend_service_openapi.yaml
+    
