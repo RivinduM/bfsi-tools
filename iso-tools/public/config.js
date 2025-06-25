@@ -2,8 +2,8 @@ const Config = {
     APP_AUTH_CLIENT_ID: "gEZiH2v8dfmjwKTcHI4Ts9IEORoa",
     APP_AUTH_BASE_URL: "https://api.asgardeo.io/t/wso2ob",
     APP_AUTH_REDIRECT_BASE_URL: "http://localhost:3000",
-    BACKEND_BASE_URL: "http://localhost:9081",
-    
+    BACKEND_BASE_URL: "https://4a8a9ab6-235b-4ce4-85fc-96d9223c9bd1.e1-us-east-azure.choreoapps.dev",
+
     // Enable/Disable features
     tools: {
         MT_TO_MX: true,
