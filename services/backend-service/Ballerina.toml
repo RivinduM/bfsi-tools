@@ -1,0 +1,8 @@
+[package]
+org = "rivindumadushan"
+name = "backend_service"
+version = "0.1.0"
+distribution = "2201.10.4-20250127-170500-e3246f5f"
+
+[build-options]
+observabilityIncluded = true
