@@ -49,8 +49,7 @@
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build && compress-cra",
-    "serve": "vite preview",
-    "clean": "rm -rf dist build"
+    "serve": "vite preview"
   },
   "eslintConfig": {
     "extends": [
