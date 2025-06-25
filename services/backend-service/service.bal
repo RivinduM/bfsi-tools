@@ -32,6 +32,7 @@ service /iso on new http:Listener(9090) {
         if transformedMsg is error {
             log:printError("Error while transforming MT message", err = transformedMsg.toBalString());
         }
+        log:printError("MT message transformed to ISO20022 successfully.");
         return transformedMsg;
     }
 
