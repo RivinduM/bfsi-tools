@@ -1,0 +1,123 @@
+openapi: 3.0.1
+info:
+  title: Service Openapi Yaml
+  version: 0.1.0
+servers:
+  - url: '{server}:{port}/'
+    variables:
+      server:
+        default: http://localhost
+      port:
+        default: '9090'
+paths:
+  /greeting:
+    get:
+      summary: A resource for generating greetings
+      operationId: getGreeting
+      parameters:
+        - name: name
+          in: query
+          description: name as a string or nil
+          schema:
+            type: string
+            nullable: true
+      responses:
+        '200':
+          description: Ok
+          content:
+            text/plain:
+              schema:
+                type: string
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+  /mt-mx/transform:
+    post:
+      operationId: postMtMxTransform
+      requestBody:
+        content:
+          text/plain:
+            schema:
+              type: string
+        required: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/xml:
+              schema:
+                type: object
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+  /mx-mt/transform:
+    post:
+      operationId: postMxMtTransform
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              type: object
+        required: true
+      responses:
+        '201':
+          description: Created
+          content:
+            text/plain:
+              schema:
+                type: string
+        '400':
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+        '500':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+components:
+  schemas:
+    ErrorPayload:
+      required:
+        - message
+        - method
+        - path
+        - reason
+        - status
+        - timestamp
+      type: object
+      properties:
+        timestamp:
+          type: string
+        status:
+          type: integer
+          format: int64
+        reason:
+          type: string
+        message:
+          type: string
+        path:
+          type: string
+        method:
+          type: string
