@@ -100,7 +100,7 @@ export const CodeEditor = ({
         }}
       >
         <Box sx={{ display: "flex" }}>
-          <Typography id="txt-code-editor-title" variant="h6">
+          <Typography id="txt-code-editor-title" >
             {title}
           </Typography>
           {downloadEnabled && isLoading && (

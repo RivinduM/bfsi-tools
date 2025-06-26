@@ -5,6 +5,7 @@ import {
   toolGroups,
 } from "../../configs/LandingPageToolsConfig";
 import Toolcard from "./Toolcard";
+import React from "react";
 
 function removeInactiveTools(tools: ITool[]) {
   return tools.filter((toolObject) => toolObject.status != ToolStatus.inactive);
@@ -15,9 +16,9 @@ function Tools() {
     <>
       <Grid container rowSpacing={2}>
         {toolGroups.map((toolGroup, index) => (
-          <>
+          <React.Fragment key={`toolGroup-${index}`}>
             <Grid
-              key={index}
+              key={`grid1${index}`}
               container
               item
               bgcolor={
@@ -27,6 +28,7 @@ function Tools() {
               justifyContent="center"
             >
               <Grid
+                key={`grid2${index}`}
                 container
                 maxWidth={{ lg: "lg", xl: "xl" }}
                 rowSpacing={7}
@@ -36,13 +38,14 @@ function Tools() {
                 justifyContent="center"
               >
                 <Grid
+                  key={`grid3${index}`}
                   container
                   rowSpacing={1}
                   columnSpacing={3}
                   alignItems="center"
                   justifyContent="center"
                 >
-                  <Grid item alignItems="center" justifyContent="center">
+                  <Grid item alignItems="center" justifyContent="center" key={`grid4${index}`}>
                     <Typography variant="h2" align="center">
                       {toolGroup.title}
                     </Typography>
@@ -52,6 +55,7 @@ function Tools() {
                     xs={12}
                     alignItems="center"
                     justifyContent="center"
+                    key={`grid5${index}`}
                   >
                     <Typography
                       variant="h5"
@@ -64,6 +68,7 @@ function Tools() {
                 </Grid>
 
                 <Grid
+                  key={`grid6${index}`}
                   container
                   item
                   columnSpacing={{
@@ -79,7 +84,7 @@ function Tools() {
                   {removeInactiveTools(toolGroup.tools).map(
                     (toolObject, index) => (
                       <Grid
-                        key={index}
+                        key={`tc-grid${index}`}
                         container
                         item
                         xs={12}
@@ -106,6 +111,7 @@ function Tools() {
                         }}
                       >
                         <Toolcard
+                          key={`toolcard${index}`}
                           title={toolObject.title}
                           description={toolObject.description}
                           image={toolObject.image}
@@ -118,7 +124,7 @@ function Tools() {
                 </Grid>
               </Grid>
             </Grid>
-          </>
+          </React.Fragment>
         ))}
       </Grid>
     </>

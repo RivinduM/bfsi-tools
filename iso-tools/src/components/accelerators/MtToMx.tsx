@@ -4,7 +4,7 @@ import DOMPurify from "dompurify";
 import React, { useCallback, useContext, useState } from "react";
 import { THROTTLED_OUT_PAGE_TITLE } from "../../configs/TextConstants";
 import { MT_TO_MX_URL } from "../../configs/Constants";
-import LoginOverlay from "../authentication/LoginOverlay";
+// import LoginOverlay from "../authentication/LoginOverlay";
 import { DarkModeContext } from "../context/DarkModeContext";
 import ErrorDisplay from "../error/ErrorDisplay";
 import BasicTabs from "../execution/BasicTabs";
@@ -320,7 +320,7 @@ function formatXml(xml: string) {
             >
               <>
                 {isError && (
-                  <ErrorDisplay
+                  <ErrorDisplay 
                     statusCode={statusCode}
                     message={
                       statusCode == "429"
