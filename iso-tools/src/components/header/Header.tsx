@@ -68,7 +68,7 @@ export const Header = ({ title, shortDescription }: Props) => {
               >
                 <Box
                   component="img"
-                  src="fhir-tools.svg"
+                  src="bfsi-tools.png"
                   width={{ xs: 89, md: 89 }}
                   height={{ xs: 29, md: 29 }}
                   marginLeft={{ xs: 1.8, md: 2 }}

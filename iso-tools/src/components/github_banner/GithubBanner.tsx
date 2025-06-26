@@ -46,7 +46,7 @@ function GithubBanner({ content, marginTop = 3, marginBottom = 2 }: Props) {
             <Button
               variant="contained"
               color="info"
-              href="https://wso2.com/contact/?ref=Healthcare"
+              href="https://wso2.com/contact/?ref=financial-services" // todo: update link
               target="_blank"
               size="large"
               sx={{

@@ -1,17 +1,8 @@
-import CableOutlinedIcon from "@mui/icons-material/CableOutlined";
-import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
-import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
 import TransformOutlinedIcon from "@mui/icons-material/TransformOutlined";
-import VpnKeyOutlinedIcon from "@mui/icons-material/VpnKeyOutlined";
 import { ReactElement } from "react";
 import {
-  CcdaToFhir,
-  ConnectToEmr,
-  FhirPath,
-  FhirValidation,
   MtToMx,
-  MxToMt,
-  SmartOnFhir,
+  MxToMt
 } from "../components/accelerators";
 import { MTMXGITHUBCONTENT } from "./GithubBladeConfig";
 

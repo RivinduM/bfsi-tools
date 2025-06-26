@@ -1,6 +1,7 @@
 export enum ArticleType {
   article = "Article",
   blog = "Blog",
+  ebook = "Ebook",
 }
 
 export interface IArticle {
@@ -12,21 +13,33 @@ export interface IArticle {
 export const articles: IArticle[] = [
   {
     title:
-      "Four Ways that API-led Interoperability Will Drive Digital Healthcare Innovation",
-    link: "https://aithority.com/technology/life-sciences/four-ways-that-api-led-interoperability-will-drive-digital-healthcare-innovation/",
-  },
-  {
-    title: "How APIs are Aiding the Healthcare Industry in the 21st Century",
-    link: "https://wso2.com/blogs/thesource/how-apis-are-aiding-the-healthcare-industry-in-the-21st-century/",
+      "Steps to Achieving Successful APIM in Banking",
+    link: "https://wso2.com/blogs/thesource/steps-to-achieving-successful-apim-in-banking/",
     type: ArticleType.blog,
   },
   {
-    title:
-      "Healthcare Innovation Through The Lens Of Interoperability And Privacy",
-    link: "https://www.forbes.com/sites/forbestechcouncil/2021/04/15/healthcare-innovation-through-the-lens-of-interoperability-and-privacy/?sh=3da9fd4f1665",
+    title: "Understanding the Current Moment in Banking APIs",
+    link: "https://wso2.com/blogs/thesource/understanding-the-current-moment-in-banking-apis/",
+    type: ArticleType.blog,
   },
   {
-    title: "The Healthcare API Ecosystem: Looking Beyond The CMS Rule",
-    link: "https://www.forbes.com/sites/forbestechcouncil/2020/09/03/the-healthcare-api-ecosystem-looking-beyond-the-cms-rule/?sh=67ab81243e13",
+    title: "Accelerating Banking Innovation with Speed and Agility",
+    link: "https://wso2.com/blogs/thesource/accelerating-banking-innovation-with-speed-and-agility/",
+    type: ArticleType.blog,
+  },
+  {
+    title: "The Need to Change in the Banking World",
+    link: "https://wso2.com/blogs/thesource/the-need-to-change-in-the-banking-world/",
+     type: ArticleType.blog,
+  },
+  {
+    title: "One Simple Way to Make Your Banking APIs Profitable",
+    link: "https://wso2.com/blogs/thesource/one-simple-way-to-make-your-banking-apis-profitable/",
+     type: ArticleType.blog,
+  },
+  {
+    title: "Five Banking API Use Cases Helping Banks Meet The Digital Adoption Boom",
+    link: "https://wso2.com/ebook/5-banking-api-use-cases/",
+     type: ArticleType.ebook,
   },
 ];

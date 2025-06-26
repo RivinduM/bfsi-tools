@@ -79,7 +79,7 @@ function Banner() {
                 <Button
                   variant="contained"
                   color="info"
-                  href="https://wso2.com/contact/?ref=Healthcare"//todo
+                  href="https://wso2.com/contact/?ref=financial-services"//todo
                   target="_blank"
                   size="large"
                   sx={{
@@ -113,7 +113,7 @@ function Banner() {
                 height: { sm: 250, md: 250, lg: 300, xl: 350 },
                 backgroundBlendMode: "lighten",
               }}
-              src="banner-img.png"
+              src="banner-fs.png"
             />
           </Grid>
         </Grid>

@@ -162,6 +162,7 @@ function SwipeableStepper() {
         >
           {articles.map((step, index) => (
             <Button
+              key={`step-button${index}`}
               onClick={() => {
                 handleStepChange(index);
               }}
@@ -173,6 +174,7 @@ function SwipeableStepper() {
               }}
             >
               <Box
+                key={`step-box${index}`}
                 height={7}
                 bgcolor={
                   index == activeStep ? "secondary.main" : "text.primary"

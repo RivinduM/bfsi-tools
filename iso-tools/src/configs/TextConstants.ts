@@ -16,22 +16,30 @@ export const OTHER_TOOLS_SECTION_DESCRIPTION = `Developer Tools for experimentat
                                                 experience development.`;
 
 // WSO2 blade section
-export const WSO2_BLADE_TITLE =
-  "Digital Experiences for Payers, Providers, and Patients";
-export const WSO2_BLADE_DESCRIPTION = `Everything you need to provide awesome experiences for your
-                                       healthcare customers under one umbrella; Pre-built healthcare
-                                       APIs, the Choreo Internal Developer Platform, Asgardeo’s CIAM
-                                       capabilities and on-premises software, enables healthcare app-dev
-                                       teams to kick start their digital healthcare experience
-                                       development.`;
+export const PAYMENT_MODERNIZATION_TITLE =
+  "Modernizing Payments: Essential to Thrive in a Changing Financial Landscape";
+export const PAYMENT_MODERNIZATION_DESCRIPTION = `Embracing payment modernization through technologies and standards 
+                                      like Open APIs, AI, and ISO 20022 enhances efficiency, reduces costs, and improves 
+                                      customer experience. Banks that fail to modernize, risk higher operational costs 
+                                      and losing their competitive edge. Stay ahead by adopting innovation to ensure 
+                                      seamless, secure, and future-ready transactions.`;
 
-// Ballerina blade section
-export const BALLERINA_BLADE_TITLE =
-  "A Language Built for Healthcare - Ballerina";
-export const BALLERINA_BLADE_DESCRIPTION = `Ballerina is the only integration language built for healthcare.
-                                            With its native support for healthcare standards like FHIR, HL7,
-                                            and X12, Ballerina enables rapid health tech application
-                                            development.`;
+// ISO blade section
+export const ISO_BLADE_TITLE =
+  "ISO 20022: The Future of Financial Messaging Starts Here";
+export const ISO_BLADE_DESCRIPTION = `ISO 20022 is the global standard for financial messaging, designed to 
+                                            enhance the efficiency and accuracy of data exchange. Accelerate your ISO 
+                                            20022 adoption with WSO2 Integrator’s prebuilt libraries to experience 
+                                            improved transparency and interoperability across payments, securities, 
+                                            and trade services—all while simplifying complex financial communications.`;
+
+// Open Banking blade section
+export const OB_BLADE_TITLE =
+  "WSO2 Open Banking: Accelerate Compliance and Go Beyond";
+export const OB_BLADE_DESCRIPTION = `WSO2 open banking delivers comprehensive technology and strategic consultancy to 
+                                    help you execute standards-compliant, commercially successful open banking 
+                                    initiatives. WSO2 Open Banking is a comprehensive technology and services solution 
+                                    guiding you to achieve business goals through open banking-driven digital maturity.`;
 
 // Article banner section
 export const ARTICLE_BANNER_TITLE =

@@ -3,7 +3,6 @@ import { Box } from "@mui/material";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Tool, ToolStatus, tools } from "../../configs/ToolContentConfig";
-import ArticleBanner from "../article/ArticleBanner";
 import { MainBlade } from "../banner/MainBlade";
 import { MaintenancePage } from "../error/MaintenancePage";
 import NotFoundError from "../error/NotFoundError";
@@ -11,7 +10,6 @@ import { Footer } from "../footer/Footer";
 import GithubBanner from "../github_banner/GithubBanner";
 import { Header } from "../header/Header";
 import LandingPage from "../landing_page/LandingPage";
-import Wso2Promotion from "../promotion/Wso2Promotion";
 import Routes from "../routes/AppRoutes";
 
 declare global {
@@ -93,16 +91,6 @@ export const MainContent = () => {
 
           {/* If the particular page is in maintenance status */}
           {currentItem.status === ToolStatus.maintenance && <MaintenancePage />}
-
-          {/* Other tools display area */}
-          {/* temporary removing the tools blade until other tools are ready */}
-          {/* <Tools currentTool={currentItem.title}></Tools> */}
-
-          {/* About WSO2 display area */}
-          <Wso2Promotion></Wso2Promotion>
-
-          {/* Articles display area */}
-          <ArticleBanner></ArticleBanner>
 
           {/* Footer display area */}
           <Footer />

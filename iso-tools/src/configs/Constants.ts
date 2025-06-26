@@ -5,24 +5,8 @@ export const MT_TO_MX_URL: string = "/mt-mx/transform";
 
 export const MX_TO_MT_URL: string = "/mx-mt/transform";
 
-export const HL7V2_TO_FHIR_URL: string = "/v2tofhir/transform";
-
-export const CCDA_TO_FHIR_URL: string = "/ccdatofhir/transform";
-
-export const FHIR_PATIENT_URL: string = "/fhir/r4/patient";
-
-export const FHIR_ENCOUNTER_URL: string = "/fhir/r4/encounter";
-
-export const FHIR_PRACTITIONER_URL: string = "/fhir/r4/practitioner";
-
-export const FHIR_ORGANIZATION_URL: string = "/fhir/r4/organization";
-
-export const FHIR_OBSERVATION_URL: string = "/fhir/r4/observation";
-
-export const FHIR_VALIDATION_URL: string = "/fhir/r4/validate";
-
 export const BALLERINA_DISCORD_LINK: string =
   "https://discord.com/invite/ballerinalang";
 
 export const WSO2_CONTACT_URL: string =
-  "https://wso2.com/contact/?src=healthcare";
+  "https://wso2.com/contact/?src=financial-services"; //todo - replace with fs link

@@ -36,7 +36,7 @@ export const Header = () => {
             >
               <Box
                 component="img"
-                src="fhir-tools.svg"
+                src="bfsi-tools.png"
                 width={120}
                 height={39}
               />
