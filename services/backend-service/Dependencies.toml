@@ -5,7 +5,7 @@
 
 [ballerina]
 dependencies-toml-version = "2"
-distribution-version = "2201.10.3"
+distribution-version = "2201.10.5"
 
 [[package]]
 org = "ballerina"
@@ -336,7 +336,7 @@ modules = [
 [[package]]
 org = "ballerinax"
 name = "financial.iso20022"
-version = "2.0.1"
+version = "2.0.2"
 dependencies = [
 	{org = "ballerina", name = "data.xmldata"},
 	{org = "ballerinai", name = "observe"}
@@ -345,7 +345,7 @@ dependencies = [
 [[package]]
 org = "ballerinax"
 name = "financial.iso20022ToSwiftmt"
-version = "1.0.1"
+version = "1.0.2"
 dependencies = [
 	{org = "ballerina", name = "data.xmldata"},
 	{org = "ballerina", name = "io"},
@@ -362,7 +362,7 @@ modules = [
 [[package]]
 org = "ballerinax"
 name = "financial.swift.mt"
-version = "3.0.1"
+version = "3.0.2"
 dependencies = [
 	{org = "ballerina", name = "data.xmldata"},
 	{org = "ballerina", name = "jballerina.java"},
@@ -378,7 +378,7 @@ modules = [
 [[package]]
 org = "ballerinax"
 name = "financial.swiftmtToIso20022"
-version = "1.0.0"
+version = "1.0.1"
 dependencies = [
 	{org = "ballerina", name = "data.xmldata"},
 	{org = "ballerina", name = "io"},

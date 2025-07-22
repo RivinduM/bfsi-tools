@@ -11,7 +11,7 @@ service /iso on new http:Listener(9090) {
 
     resource function post mt\-mx/transform(@http:Payload string swiftMessage) returns xml|error {
         // log:printError(string `Message received: ` + swiftMessage);
-        regexp:RegExp mtRegex = re `^\{1:[^\}]+\}\{2:[^\}]+\}(\{3:[^\}]+\})?(\{4:\n)?(:.*\n)*-\}(\{5:[^\}]+\}\})?`;
+        regexp:RegExp mtRegex = re `^\{1:[^\}]+\}\{2:[^\}]+\}(\{3:[^\}]+\}\})?(\{4:\n)?(.*\n)*-\}(\{5:[^\}]+\}\})?`;
         if !mtRegex.isFullMatch(swiftMessage) {
             log:printError("Invalid MT message format");
             return error("Invalid MT message format");
