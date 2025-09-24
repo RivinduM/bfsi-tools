@@ -12,5 +12,7 @@ const Config = {
         MX_TO_MT: true,
         ISO8583: false,
         OPEN_BANKING_SANDBOX: true
-    }
+    },
+    supportedMXMsgTypes: ["pacs.008", "pacs.009"],
+    supportedMTMsgTypes: ["MT103", "MT202", "MT940"]
 }

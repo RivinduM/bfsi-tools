@@ -7,9 +7,16 @@ import { MX_TO_MT_URL } from "../../configs/Constants";
 // import LoginOverlay from "../authentication/LoginOverlay";
 import { DarkModeContext } from "../context/DarkModeContext";
 import ErrorDisplay from "../error/ErrorDisplay";
+import ErrorOverlay from "../error/ErrorOverlay";
 import BasicTabs from "../execution/BasicTabs";
 import { CodeEditor } from "../execution/CodeEditor";
 import { xml } from "@codemirror/lang-xml";
+
+const Config = window.Config;
+const unsupported_error = "Streamline your message conversions with our full-featured API. " +
+  "This tool is a preview of our capabilities, and currently supports only selected message types: " +
+  Config.supportedMXMsgTypes.join(", ") + ". " +
+  "\nContact Us to unlock full access and simplify your workflow.";
 
 
 interface State {
@@ -20,6 +27,8 @@ interface State {
   isLoading: boolean;
   outputType: string;
   statusCode: string;
+  showErrorOverlay: boolean;
+  overlayErrorMessage: string;
 }
 
 export const MxToMt = () => {
@@ -31,6 +40,8 @@ export const MxToMt = () => {
     isLoading: false,
     outputType: "json",
     statusCode: "500",
+    showErrorOverlay: false,
+    overlayErrorMessage: "",
   });
 
   const { state: authState, httpRequest } = useAuthContext();
@@ -53,6 +64,8 @@ export const MxToMt = () => {
     isLoading,
     outputType,
     statusCode,
+    showErrorOverlay,
+    overlayErrorMessage,
   } = state;
 
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
@@ -98,6 +111,14 @@ export const MxToMt = () => {
     }
   };
 
+  const handleCloseErrorOverlay = () => {
+    setState((prevState) => ({
+      ...prevState,
+      showErrorOverlay: false,
+      overlayErrorMessage: "",
+    }));
+  };
+
 
 const handleSubmit = async () => {
   const data = input;
@@ -118,11 +139,23 @@ const handleSubmit = async () => {
       try {
         const errorJson = JSON.parse(errorText);
         if (errorJson.message) {
-          setState((prevState) => ({
-            ...prevState,
-            output: "Error while transforming ISO 20022 message: " + errorJson.message,
-            isLoading: false,
-          }));
+          const fullErrorMessage = "Error while transforming ISO 20022 message: " + errorJson.message;
+          
+          // Check if it's the specific error message we want to show in overlay
+          if (errorJson.message === "Invalid ISO 20022 message format" || errorJson.message === "Unsupported MX message type") {
+            setState((prevState) => ({
+              ...prevState,
+              showErrorOverlay: true,
+              overlayErrorMessage: unsupported_error,
+              isLoading: false,
+            }));
+          } else {
+            setState((prevState) => ({
+              ...prevState,
+              output: fullErrorMessage,
+              isLoading: false,
+            }));
+          }
         } else {
           setState((prevState) => ({
             ...prevState,
@@ -309,6 +342,12 @@ const handleSubmit = async () => {
           </>
         )}
       </Box>
+      
+      <ErrorOverlay
+        message={overlayErrorMessage}
+        onClose={handleCloseErrorOverlay}
+        isVisible={showErrorOverlay}
+      />
     </Container>
   );
 };
