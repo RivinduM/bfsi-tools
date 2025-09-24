@@ -10,11 +10,6 @@ configurable string[] supportedMXMsgTypes = [];
 
 # A service representing a network-accessible API
 # bound to port `9090`.
-@http:ServiceConfig {
-    cors: {
-        allowOrigins: ["http://www.m3.com", "http://localhost:3000", "http://localhost:9090", "http://localhost:9081"]
-    }
-}
 service /iso on new http:Listener(9090) {
 
     resource function post mt\-mx/transform(@http:Payload string swiftMessage) returns xml|error {
