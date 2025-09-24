@@ -113,7 +113,7 @@ function Banner() {
                 height: { sm: 250, md: 250, lg: 300, xl: 350 },
                 backgroundBlendMode: "lighten",
               }}
-              src="banner-fs.png"
+              src="hero-img.png"
             />
           </Grid>
         </Grid>
