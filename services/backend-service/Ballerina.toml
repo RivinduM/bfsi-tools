@@ -2,7 +2,7 @@
 org = "rivindumadushan"
 name = "backend_service"
 version = "0.1.0"
-distribution = "2201.12.9"
+distribution = "2201.10.5"
 
 [build-options]
 observabilityIncluded = true
