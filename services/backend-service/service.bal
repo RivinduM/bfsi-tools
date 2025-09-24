@@ -7,9 +7,15 @@ import ballerina/lang.regexp;
 
 configurable string[] supportedMTMsgTypes = [];
 configurable string[] supportedMXMsgTypes = [];
+configurable string[] allowOrigins = [];
 
 # A service representing a network-accessible API
 # bound to port `9090`.
+@http:ServiceConfig {
+    cors: {
+        allowOrigins: allowOrigins
+    }
+}
 service /iso on new http:Listener(9090) {
 
     resource function post mt\-mx/transform(@http:Payload string swiftMessage) returns xml|error {
