@@ -116,7 +116,7 @@ export default function ErrorOverlay({ message, onClose, isVisible }: ErrorOverl
               fontWeight: "bold",
             }}
           >
-            Full acces required
+            Full access required
           </Typography>
           
           <Typography

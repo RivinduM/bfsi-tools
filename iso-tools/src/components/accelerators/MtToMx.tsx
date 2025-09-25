@@ -16,7 +16,7 @@ const Config = window.Config;
 const unsupported_error = "Streamline your message conversions with our full-featured API. " +
   "This tool is a preview of our capabilities, and currently supports only selected message types: " +
   Config.supportedMTMsgTypes.join(", ") + ". " +
-  "\nContact Us to unlock full access and simplify your workflow.";
+  "\nContact us to unlock full access and simplify your workflow.";
 
 interface State {
   input: string;
